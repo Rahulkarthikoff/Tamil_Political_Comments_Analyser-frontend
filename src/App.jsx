@@ -11,7 +11,7 @@ function App() {
     setLoading(true);
     setSentiment('');
     try {
-      const response = await axios.post('http://localhost:5000/predict', { text });
+      const response = await axios.post('https://tamil-political-analyser-api.onrender.com', { text });
       setSentiment(response.data.sentiment);
     } catch (error) {
       setSentiment('Error: ' + error.message);
